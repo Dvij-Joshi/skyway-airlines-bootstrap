@@ -1,2 +1,106 @@
 <!-- This file was converted from search_results.php to static HTML. -->
 <!-- See search_results.php for the static HTML content. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, .table, .table th, .table td {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        h2, .navbar-brand, .btn, .form-label, .alert {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        .navbar {
+            background-color: var(--dark-color);
+        }
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .table th {
+            background: var(--primary-light);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        .table td {
+            vertical-align: middle;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #0069ad;
+            border-color: #0069ad;
+        }
+        .btn-secondary {
+            border-radius: 30px;
+        }
+        .alert-warning {
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+</head>
+<body style="background: var(--light-color);">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-plane-departure me-2"></i>SkyWay</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="mb-4">Available Flights</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover bg-white">
+                <thead class="table-light">
+                    <tr>
+                        <th>Airline</th>
+                        <th>Flight No.</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Price ($)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demo Airline</td>
+                        <td>123</td>
+                        <td>City A</td>
+                        <td>City B</td>
+                        <td>2025-05-01 10:00</td>
+                        <td>2025-05-01 14:00</td>
+                        <td>199</td>
+                        <td><a href="booking.html" class="btn btn-primary btn-sm">Book</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sample Airways</td>
+                        <td>456</td>
+                        <td>City C</td>
+                        <td>City D</td>
+                        <td>2025-05-02 09:00</td>
+                        <td>2025-05-02 13:00</td>
+                        <td>249</td>
+                        <td><a href="booking.html" class="btn btn-primary btn-sm">Book</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alert alert-warning mt-4" role="alert">
+            This is a static demo. Flight data is for display purposes only.
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

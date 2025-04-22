@@ -1,2 +1,161 @@
 <!-- This file was converted from index.php to static HTML. -->
 <!-- See index.php for the static HTML content. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWay Airlines - Book Your Flight</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane-departure me-2"></i>SkyWay
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center text-white">
+                    <h1 class="mb-3 fw-bold">Find and Book Your Flight</h1>
+                    <p class="lead mb-4">Search for flights, select your seats, and book your tickets online.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Flight Search Form -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <ul class="nav nav-pills mb-3" id="flightTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="roundtrip-tab" data-bs-toggle="pill" data-bs-target="#roundtrip" type="button" role="tab">Round Trip</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="oneway-tab" data-bs-toggle="pill" data-bs-target="#oneway" type="button" role="tab">One Way</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-4" id="flightTabContent">
+                    <!-- Round Trip Form -->
+                    <div class="tab-pane fade show active" id="roundtrip" role="tabpanel">
+                        <form action="search_results.html" method="get">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fromCity" class="form-label">From</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-plane-departure"></i></span>
+                                        <input type="text" class="form-control" id="fromCity" name="fromCity" placeholder="Enter departure city">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="toCity" class="form-label">To</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-plane-arrival"></i></span>
+                                        <input type="text" class="form-control" id="toCity" name="toCity" placeholder="Enter destination city">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="departDate" class="form-label">Departure Date</label>
+                                    <input type="date" class="form-control" id="departDate" name="departDate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="returnDate" class="form-label">Return Date</label>
+                                    <input type="date" class="form-control" id="returnDate" name="returnDate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="class" class="form-label">Class</label>
+                                    <select class="form-select" id="class" name="class">
+                                        <option value="Economy">Economy</option>
+                                        <option value="Business">Business</option>
+                                        <option value="First">First</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-primary w-100">Search Flights</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- One Way Form -->
+                    <div class="tab-pane fade" id="oneway" role="tabpanel">
+                        <form action="search_results.html" method="get">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fromCityOneway" class="form-label">From</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-plane-departure"></i></span>
+                                        <input type="text" class="form-control" id="fromCityOneway" name="fromCity" placeholder="Enter departure city">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="toCityOneway" class="form-label">To</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-plane-arrival"></i></span>
+                                        <input type="text" class="form-control" id="toCityOneway" name="toCity" placeholder="Enter destination city">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="departDateOneway" class="form-label">Departure Date</label>
+                                    <input type="date" class="form-control" id="departDateOneway" name="departDate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="classOneway" class="form-label">Class</label>
+                                    <select class="form-select" id="classOneway" name="class">
+                                        <option value="Economy">Economy</option>
+                                        <option value="Business">Business</option>
+                                        <option value="First">First</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-primary w-100">Search Flights</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
